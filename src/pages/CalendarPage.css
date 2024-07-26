@@ -1,0 +1,18 @@
+/* src/pages/CalendarPage.css */
+.calendar-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .calendar-page h1 {
+    margin-bottom: 20px;
+  }
+  
+  .react-calendar {
+    width: 100%;
+    max-width: 500px;
+  }
+  

@@ -1,0 +1,84 @@
+/* Offres Management Styles */
+.offers-management {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  margin-left: 150px;
+}
+
+.offers-controls {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.offers-controls button {
+  padding: 10px 20px;
+  background-color: #50829b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.offers-controls button:hover {
+  background-color: #45a049;
+}
+
+.offers-form {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.offers-form.active {
+  display: block;
+}
+
+.offers-form h2 {
+  margin-top: 0;
+}
+
+.offers-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.offers-form input,
+.offers-form select,
+.offers-form button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.offers-form button {
+  background-color: #50829b;
+  color: white;
+  cursor: pointer;
+}
+
+.offers-form button:hover {
+  background-color: #45a049;
+}
+
+.offers-management table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.offers-management table th,
+.offers-management table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.offers-management table th {
+  background-color: #f2f2f2;
+  color: black;
+}
