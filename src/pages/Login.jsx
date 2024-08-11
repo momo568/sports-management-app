@@ -1,18 +1,21 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import './Login.css';
-import { assets } from '../assets/assets';
+import "./Login.css";
+import { assets } from "../assets/assets";
+import { useAuth } from "./AuthContext";
 
 const Login = () => {
-  const [login, setLogin] = useState("");
+  const [usrname, setLogin] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-
+  const { login } = useAuth();
   const handleSubmit = (e) => {
     e.preventDefault();
-   
-    navigate("/");
+    if (usrname === "ouma" && password === "123456") {
+      const token = "oumatoken";
+      login(token);
+    }
   };
 
   return (
@@ -25,7 +28,7 @@ const Login = () => {
           <input
             type="text"
             name="login"
-            value={login}
+            value={usrname}
             onChange={(e) => setLogin(e.target.value)}
             required
           />
@@ -47,5 +50,3 @@ const Login = () => {
 };
 
 export default Login;
-
-

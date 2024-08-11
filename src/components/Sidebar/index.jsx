@@ -9,14 +9,18 @@ import {
   FiCalendar,
   FiLogOut,
 } from "react-icons/fi";
+import { useAuth } from '../../pages/AuthContext';
 
 function Sidebar() {
   const [content, setContent] = useState("");
   const [menu, setMenu] = useState("menu");
-
+  const { logout } = useAuth();
   const handleMenuClick = (menuName) => {
     setMenu(menuName);
     setContent(menuName);
+    if(menuName === "logout") {
+      logout()
+    }
   };
 
   return (
@@ -49,7 +53,7 @@ function Sidebar() {
             </NavLink>
           </li>
           <li className={content === "logout" ? "active" : ""}>
-            <NavLink to="/login" onClick={() => handleMenuClick("logout")}>
+            <NavLink to="/public/login" onClick={() => handleMenuClick("logout")}>
               <FiLogOut /> Logout
             </NavLink>
           </li>

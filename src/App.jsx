@@ -60,7 +60,7 @@ const PrivateRoutes = () => {
   }, []);
 
   if (!isAuthenticated) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/public/login" replace />;
   }
 
   return (
@@ -69,9 +69,9 @@ const PrivateRoutes = () => {
       <Sidebar />
       <Routes>
         <Route path="/" element={<Dashboard />} />
-        <Route path="customerManagement" element={<CustomerManagement />} />
-        <Route path="offerManagement" element={<OffresManagement />} />
-        <Route path="paymentsManagement" element={<PaymentsManagement />} />
+        <Route path="/customerManagement" element={<CustomerManagement />} />
+        <Route path="/offerManagement" element={<OffresManagement />} />
+        <Route path="/paymentsManagement" element={<PaymentsManagement />} />
         <Route path="/contact-us" element={<ContactForm />} />
         <Route path="/calendar" element={<CalendarPage />} />
         <Route path="/holiday" element={<HolidayPage />} />
